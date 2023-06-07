@@ -1,33 +1,49 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 
 const SignUp = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const {createUser} = useContext(AuthContext)
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const onSubmit = data => {
         console.log(data);
         createUser(data.email, data.password)
-        .then(result=>{
-            const loggedUser = result.user;
-            console.log(loggedUser)
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                updateUserProfile(data.name, data.photo)
+                .then(()=>{
+                    console.log('user profile info updated', )
+                    reset();
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'User Sign up Successful',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    navigate('/')
+                })
+                .catch(error => console.log(error))
+            })
     };
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Sign up!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <div className="ml-5">
+                    <img src="https://globalrecognitions.com/r-r/public/assets/vendors/images/login-page-img.png" alt="" />
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mr-5">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-
+                    <h1 className="text-4xl font-bold">Sign up!</h1>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -77,7 +93,8 @@ const SignUp = () => {
                             <input className="btn btn-primary" type="submit" value="Sign up" />
                         </div>
                     </form>
-                    <p>Already have an account? <Link className='text-blue-800' to='/login'>Log in</Link></p>
+                    <p className='ml-9'>Already have an account? <Link className='text-blue-800' to='/login'>Log in</Link></p>
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>

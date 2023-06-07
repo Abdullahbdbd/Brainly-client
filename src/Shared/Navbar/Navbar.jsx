@@ -21,6 +21,7 @@ const Navbar = () => {
             user ? <div className='lg:flex'>
                 <li><Link to='/dashboard'>Dashboard</Link></li>
                 <><li><Link onClick={handleLogout}>Log out</Link></li></>
+               <img className='h-10 rounded-full ' src={user?.photoURL} alt="" />
             </div>
                 : <><li><Link to='/login'>Login</Link></li></>
         }
