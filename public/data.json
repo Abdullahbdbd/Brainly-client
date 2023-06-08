@@ -3,7 +3,7 @@
       "_id": 1,
       "img": "https://img.freepik.com/free-photo/young-bearded-man-glasses-blue-shirt-holding-book-smiling-confident_141793-37440.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Sheikh Ahmed",
-      "class": 3,
+      "totalClass": 3,
       "class_name": "Introduction to Quran",
       "email": "ahmed@example.com",
       "category": "Teacher"
@@ -12,7 +12,7 @@
       "_id": 2,
       "img": "https://img.freepik.com/premium-vector/muslim-woman-holds-stack-books-his-hands-knowledge-education-future-work-personal-improvement-reading-list_531064-2848.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Ustadha Fatima",
-      "class": 2,
+      "totalClass": 2,
       "class_name": "Fiqh Basics",
       "email": "fatima@example.com",
       "category": "Teacher"
@@ -21,7 +21,7 @@
       "_id": 3,
       "img": "https://img.freepik.com/free-photo/medium-shot-young-man-looking-camera-vinyl-store_23-2148237235.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Sheikh Mohammed",
-      "class": 2,
+      "totalClass": 2,
       "class_name": "Islamic History",
       "email": "mohammed@example.com",
       "category": "Teacher"
@@ -30,7 +30,7 @@
       "_id": 4,
       "img": "https://img.freepik.com/free-photo/portrait-young-bearded-man-reading-book_114579-79011.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Ustadh Ibrahim",
-      "class": 2,
+      "totalClass": 2,
       "class_name": "Arabic Language",
       "email": "ibrahim@example.com",
       "category": "Teacher"
@@ -39,7 +39,7 @@
       "_id": 5,
       "img": "https://img.freepik.com/free-photo/arabic-businessman-traditional-wear-holding-open-book-pointing-with-finger-it-with-smile-face-standing-blue-wall_141793-47573.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Sheikh Ali",
-      "class": 1,
+      "totalClass": 1,
       "class_name": "Tafsir of Surah Al-Baqarah",
       "email": "ali@example.com",
       "category": "Teacher"
@@ -48,7 +48,7 @@
       "_id": 6,
       "img": "https://img.freepik.com/free-photo/confident-male-teacher-wearing-glasses-sitting-table-with-school-tools-classroom_141793-114409.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Ustadh Omar",
-      "class": 2,
+      "totalClass": 2,
       "class_name": "Prophet Muhammad's Life",
       "email": "omar@example.com",
       "category": "Teacher"
@@ -57,7 +57,7 @@
       "_id": 7,
       "img": "https://img.freepik.com/free-vector/muslim-girl-holding-book_1308-49252.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Ustadha Aisha",
-      "class": 2,
+      "totalClass": 2,
       "class_name": "Islamic Ethics",
       "email": "aisha@example.com",
       "category": "Teacher"
@@ -66,7 +66,7 @@
       "_id": 8,
       "img": "https://img.freepik.com/free-photo/businessman-with-notebook-smiling-white-background_114579-28468.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Sheikh Khalid",
-      "class": 2,
+      "totalClass": 2,
       "class_name": "Hadith Studies",
       "email": "khalid@example.com",
       "category": "Teacher"
@@ -75,7 +75,7 @@
       "_id": 9,
       "img": "https://img.freepik.com/free-photo/pleased-young-businessman-wearing-glasses-holding-book-isolated-white-background_141793-63613.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.2.1209151801.1673868797&semt=ais",
       "name": "Ustadh Yusuf",
-      "class": 2,
+      "totalClass": 2,
       "class_name": "Islamic Calligraphy",
       "email": "yusuf@example.com",
       "category": "Teacher"
@@ -84,7 +84,7 @@
       "_id": 10,
       "img": "https://img.freepik.com/free-vector/muslim-girl-safari-outfit-cartoon-character-sticker_1308-80383.jpg?size=626&ext=jpg&uid=R105766307&ga=GA1.1.1209151801.1673868797&semt=ais",
       "name": "Ustadha Mariam",
-      "class":2,
+      "totalClass":2,
       "class_name": "Seerah of the Companions",
       "email": "mariam@example.com",
       "category": "Teacher"
@@ -96,7 +96,7 @@
         "teacher": "Sheikh Ahmed",
         "seat": 15,
         "price": 50,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 12,
@@ -105,7 +105,7 @@
         "teacher": "Ustadha Fatima",
         "seat": 20,
         "price": 40,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 13,
@@ -114,7 +114,7 @@
         "teacher": "Sheikh Mohammed",
         "seat": 25,
         "price": 45,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 14,
@@ -123,7 +123,7 @@
         "teacher": "Ustadh Ibrahim",
         "seat": 30,
         "price": 55,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 15,
@@ -132,7 +132,7 @@
         "teacher": "Sheikh Ali",
         "seat": 20,
         "price": 50,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 16,
@@ -141,7 +141,7 @@
         "teacher": "Ustadh Omar",
         "seat": 25,
         "price": 45,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 17,
@@ -150,7 +150,7 @@
         "teacher": "Ustadha Aisha",
         "seat": 20,
         "price": 40,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 18,
@@ -159,7 +159,7 @@
         "teacher": "Sheikh Khalid",
         "seat": 30,
         "price": 55,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 19,
@@ -168,7 +168,7 @@
         "teacher": "Ustadh Yusuf",
         "seat": 15,
         "price": 50,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 20,
@@ -177,7 +177,7 @@
         "teacher": "Ustadha Mariam",
         "seat": 25,
         "price": 45,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 21,
@@ -186,7 +186,7 @@
         "teacher": "Sheikh Ahmed",
         "seat": 20,
         "price": 40,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 22,
@@ -195,7 +195,7 @@
         "teacher": "Ustadha Fatima",
         "seat": 25,
         "price": 45,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 23,
@@ -204,7 +204,7 @@
         "teacher": "Ustadh Yusuf",
         "seat": 15,
         "price": 50,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 24,
@@ -213,7 +213,7 @@
         "teacher": "Sheikh Ahmed",
         "seat": 20,
         "price": 40,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 25,
@@ -222,7 +222,7 @@
         "teacher": "Ustadha Mariam",
         "seat": 25,
         "price": 45,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 26,
@@ -231,7 +231,7 @@
         "teacher": "Sheikh Khalid",
         "seat": 30,
         "price": 55,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 27,
@@ -240,7 +240,7 @@
         "teacher": "Ustadh Omar",
         "seat": 20,
         "price": 50,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 28,
@@ -249,7 +249,7 @@
         "teacher": "Ustadh Ibrahim",
         "seat": 25,
         "price": 45,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 29,
@@ -258,7 +258,7 @@
         "teacher": "Ustadha Aisha",
         "seat": 20,
         "price": 40,
-        "category": "Class"
+        "category": "totalClass"
       },
       {
         "_id": 30,
@@ -267,6 +267,6 @@
         "teacher": "Sheikh Mohammed",
         "seat": 30,
         "price": 55,
-        "category": "Class"
+        "category": "totalClass"
       }
   ]
