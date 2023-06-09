@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import { FaBook } from 'react-icons/fa';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -16,12 +17,17 @@ const Navbar = () => {
         <li><Link to='/instructors'>Instructors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
 
-        {/* <><button onClick={handleLogout} className="btn btn-ghost">Log out</button></> */}
         {
             user ? <div className='lg:flex'>
                 <li><Link to='/dashboard'>Dashboard</Link></li>
+                <li><Link to='/'>
+                    <button className="btn btn-sm">
+                    <FaBook></FaBook>
+                        <div className="badge">+99</div>
+                    </button>
+                </Link></li>
                 <><li><Link onClick={handleLogout}>Log out</Link></li></>
-               <img className='h-10 rounded-full ' src={user?.photoURL} alt="" />
+                <img className='h-10 rounded-full ' src={user?.photoURL} alt="" />
             </div>
                 : <><li><Link to='/login'>Login</Link></li></>
         }
