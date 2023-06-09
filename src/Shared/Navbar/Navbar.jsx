@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { FaBook } from 'react-icons/fa';
+import useSelectedClass from '../../hooks/useSelectedClass';
 
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
+    const [selectedClass] = useSelectedClass();
 
     const handleLogout = () => {
         logOut()
@@ -20,10 +22,10 @@ const Navbar = () => {
         {
             user ? <div className='lg:flex'>
                 <li><Link to='/dashboard'>Dashboard</Link></li>
-                <li><Link to='/'>
+                <li><Link to='/dashboard/myclass'>
                     <button className="btn btn-sm">
                     <FaBook></FaBook>
-                        <div className="badge">+99</div>
+                        <div className="badge">+{selectedClass?.length || 0}</div>
                     </button>
                 </Link></li>
                 <><li><Link onClick={handleLogout}>Log out</Link></li></>
@@ -55,7 +57,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    
                 </div>
             </div>
         </>
