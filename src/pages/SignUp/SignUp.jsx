@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import { saveUser } from "../../api/auth";
 
 
 const SignUp = () => {
@@ -29,6 +30,7 @@ const SignUp = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
+                    saveUser(result.user)
                     navigate('/')
                 })
                 .catch(error => console.log(error))

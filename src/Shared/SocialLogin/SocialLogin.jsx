@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { saveUser } from '../../api/auth';
 
 const SocialLogin = () => {
     const { googleSignIn } = useContext(AuthContext)
@@ -15,6 +16,7 @@ const SocialLogin = () => {
         .then(result=>{
             const loggedInUser = result.user;
                console.log(loggedInUser)
+               saveUser(result.user)
                navigate(from, {replace: true});
         })
     }
