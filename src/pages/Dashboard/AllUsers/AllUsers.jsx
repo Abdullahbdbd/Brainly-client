@@ -29,6 +29,26 @@ const AllUsers = () => {
         })
     }
 
+    const handleMakeInstructor = id =>{
+        fetch(`http://localhost:5000/users/instructor/${id}`,{
+            method: 'PATCH'
+        })
+        .then(res=> res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.modifiedCount){
+                refetch();
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Made Instructor Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+    }
+
     return (
         <div className='w-full'>
             <div className="overflow-x-auto">
@@ -50,7 +70,7 @@ const AllUsers = () => {
                                 <th>{index+1}</th>
                                 <td>{user.email}</td>
                                 <td>{user.role === 'admin' ? 'Admin':<button onClick={()=> handleMakeAdmin(user._id)}><FaUserTie></FaUserTie></button>}</td>
-                                <td>{user.role === 'instructor' ? 'Instructor':<FaUsers></FaUsers>}</td>
+                                <td>{user.role === 'instructor' ? 'Instructor':<button onClick={()=> handleMakeInstructor(user._id)}><FaUsers></FaUsers></button>}</td>
                             </tr>)
                         }
                         
