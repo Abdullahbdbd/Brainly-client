@@ -1,7 +1,8 @@
 // save a user to database
 export const saveUser = user => {
     const currentUser = {
-      email: user.email,
+      email: user.email
+      
     }
   
     fetch(`http://localhost:5000/users/${user?.email}`, {
