@@ -3,11 +3,12 @@ import { Link, Outlet } from 'react-router-dom';
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
 import { FaBook, FaBookMedical, FaBookOpen, FaBookReader, FaUsers } from 'react-icons/fa';
+import useAdmin from '../hooks/useAdmin';
 
 const Dashboard = () => {
 
     //TODO
-    const isAdmin = true
+    const [isAdmin] = useAdmin()
     const isInstructor = true
 
     return (
