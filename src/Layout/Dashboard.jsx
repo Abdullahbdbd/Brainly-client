@@ -4,13 +4,12 @@ import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
 import { FaBook, FaBookMedical, FaBookOpen, FaBookReader, FaUsers } from 'react-icons/fa';
 import useAdmin from '../hooks/useAdmin';
+import useInstructor from '../hooks/useInstructor';
 
 const Dashboard = () => {
 
-    //TODO
     const [isAdmin] = useAdmin()
-    const isInstructor = true
-
+    const [isInstructor] = useInstructor()
     return (
         <>
             <Navbar></Navbar>
@@ -37,7 +36,7 @@ const Dashboard = () => {
                                          isInstructor ?
                                             <>
                                                 <li><Link to='/dashboard/instructorClass'><FaBook></FaBook> My Class</Link></li>
-                                                <li><Link to='/dashboard/addClass'><FaBookMedical></FaBookMedical> Add Classes</Link></li>
+                                                <li><Link to='/dashboard/addItem'><FaBookMedical></FaBookMedical> Add Classes</Link></li>
                                             </>
                                             : <>
                                                 <li><Link to='/dashboard/myclass'><FaBookOpen></FaBookOpen> My Selected Classes</Link></li>
