@@ -2,6 +2,7 @@ import React from 'react';
 import useSelectedClass from '../../../hooks/useSelectedClass';
 import { FaTrash } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const MyClass = () => {
     const [selectedClass, refetch] = useSelectedClass();
@@ -40,10 +41,12 @@ const MyClass = () => {
 
 
     return (
-        <div className='-mt-40'>
+        <div className='mt-10'>
             <div className='uppercase font-semibold h-[60] flex justify-between'>
                 <h3 className='text-3xl'>Total Price: ${total}</h3>
-                <button className="btn btn-active bg-green-500 text-xl">Pay</button>
+                <Link to='/dashboard/payment'>
+                    <button className="btn btn-active bg-green-500 text-xl">Pay</button>
+                </Link>
             </div>
 
 
