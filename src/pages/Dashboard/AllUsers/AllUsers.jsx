@@ -72,6 +72,8 @@ const AllUsers = () => {
                                 <th>{index+1}</th>
                                 <td>{user.email}</td>
                                 <td>{user.role === 'admin' ? 'Admin':<button onClick={()=> handleMakeAdmin(user._id)}><FaUserTie></FaUserTie></button>}</td>
+
+                                
                                 <td>{user.role === 'instructor' ? 'Instructor':<button onClick={()=> handleMakeInstructor(user._id)}><FaUsers></FaUsers></button>}</td>
                             </tr>)
                         }

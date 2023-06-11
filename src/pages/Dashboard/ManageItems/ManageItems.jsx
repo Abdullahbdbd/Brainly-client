@@ -18,21 +18,6 @@ const ManageItems = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                // fetch(` https://bistro-boss-server-abdullahbdbd.vercel.app/carts/${item._id}`, {
-                //     method: 'DELETE'
-                // })
-                //     .then(res => res.json())
-                //     .then(data => {
-                //         if (data.deletedCount > 0) {
-                //             refetch();
-                //             Swal.fire(
-                //                 'Deleted!',
-                //                 'Class has been deleted.',
-                //                 'success'
-                //             )
-                //         }
-                //     })
-
                 axiosSecure.delete(`/school/${item._id}`)
                     .then(res => {
                         if (res.data.deletedCount > 0) {
