@@ -2,9 +2,12 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
+import useAuth from '../../../hooks/useAuth';
 
 const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 const AddItems = () => {
+    const {user} = useAuth()
     const [axiosSecure] = useAxiosSecure();
     const { register, handleSubmit, reset } = useForm();
     const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
@@ -44,6 +47,10 @@ const AddItems = () => {
     };
 
     return (
+        <>
+        <Helmet>
+            <title>Dashboard | Add Item</title>
+        </Helmet>
         <div className='w-full px-36'>
 
             <h1 className='text-center text-4xl font-semibold'>ADD AN ITEM</h1>
@@ -74,7 +81,7 @@ const AddItems = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Teacher Name*</span>
                         </label>
-                        <input type="teacher" placeholder="Teacher Name"
+                        <input type="teacher" placeholder="Teacher Name" defaultValue={user.displayName}
                             {...register("teacher", { required: true, maxLength: 80 })} className="input input-bordered w-full " required />
                     </div>
 
@@ -82,7 +89,7 @@ const AddItems = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Teacher Email*</span>
                         </label>
-                        <input type="email" placeholder="Teacher Email"
+                        <input type="email" placeholder="Teacher Email" defaultValue={user.email}
                             {...register("email", { required: true, })} className="input input-bordered w-full " required />
                     </div>
                 </div>
@@ -122,6 +129,7 @@ const AddItems = () => {
 
             </form>
         </div>
+        </>
     );
 };
 

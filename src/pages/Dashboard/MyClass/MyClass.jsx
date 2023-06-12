@@ -3,6 +3,7 @@ import useSelectedClass from '../../../hooks/useSelectedClass';
 import { FaTrash } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const MyClass = () => {
     const [selectedClass, refetch] = useSelectedClass();
@@ -41,6 +42,10 @@ const MyClass = () => {
 
 
     return (
+        <>
+        <Helmet>
+            <title>Dashboard | Selected Classes</title>
+        </Helmet>
         <div className='mt-10'>
             <div className='uppercase font-semibold h-[60] flex justify-between'>
                 <h3 className='text-3xl'>Total Price: ${total}</h3>
@@ -80,6 +85,7 @@ const MyClass = () => {
                 </table>
             </div>
         </div>
+        </>
     );
 };
 

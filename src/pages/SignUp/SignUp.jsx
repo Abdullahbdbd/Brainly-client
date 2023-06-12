@@ -5,6 +5,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 import { saveUser } from "../../api/auth";
+import { Helmet } from "react-helmet-async";
 
 
 const SignUp = () => {
@@ -38,6 +39,10 @@ const SignUp = () => {
     };
 
     return (
+        <>
+         <Helmet>
+            <title>Sign up</title>
+        </Helmet>
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="ml-5 w-1/2">
@@ -100,6 +105,7 @@ const SignUp = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

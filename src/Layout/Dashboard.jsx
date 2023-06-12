@@ -5,6 +5,7 @@ import Footer from '../Shared/Footer/Footer';
 import { FaBook, FaBookMedical, FaBookOpen, FaBookReader, FaUsers } from 'react-icons/fa';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
+import { Helmet } from 'react-helmet-async';
 
 const Dashboard = () => {
 
@@ -12,6 +13,9 @@ const Dashboard = () => {
     const [isInstructor] = useInstructor()
     return (
         <>
+         <Helmet>
+            <title>Dashboard</title>
+        </Helmet>
             <Navbar></Navbar>
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -40,7 +44,6 @@ const Dashboard = () => {
                                             </>
                                             : <>
                                                 <li><Link to='/dashboard/myclass'><FaBookOpen></FaBookOpen> My Selected Classes</Link></li>
-                                                <li><Link to='/dashboard/enrolledClass'><FaBookReader></FaBookReader> My Enrolled Classes</Link></li>
                                             </>
                                     }
                                 </>

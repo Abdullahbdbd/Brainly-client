@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const MyClass = ({ item, index }) => {
     return (
         <div>
+            <Helmet>
+                <title>Dashboard | My Classes</title>
+            </Helmet>
             <div className="overflow-x-auto">
                 <table className="table">
                     <thead>
@@ -16,7 +20,7 @@ const MyClass = ({ item, index }) => {
                     </thead>
                     <tbody>
                         <tr>
-                            <th>{index+1}</th>
+                            <th>{index + 1}</th>
                             <td>
                                 <div className="flex items-center space-x-3">
                                     <div className="avatar">

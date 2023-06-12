@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const [show, setShow] = useState(false)
@@ -36,6 +37,10 @@ const Login = () => {
     }
 
     return (
+        <>
+         <Helmet>
+            <title>Login</title>
+        </Helmet>
         <div className="hero mt-20">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left ml-5 h-1/2 w-1/2">
@@ -71,6 +76,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

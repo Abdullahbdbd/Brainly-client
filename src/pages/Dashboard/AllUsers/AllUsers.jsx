@@ -3,6 +3,7 @@ import React from 'react';
 import { FaUserTie, FaUsers } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import { Helmet } from 'react-helmet-async';
 
 const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure();
@@ -52,6 +53,10 @@ const AllUsers = () => {
     }
 
     return (
+        <>
+        <Helmet>
+            <title>Dashboard | Manage Users</title>
+        </Helmet>
         <div className='w-full'>
             <div className="overflow-x-auto">
                 <table className="table table-zebra text-xl font-semibold">
@@ -73,7 +78,7 @@ const AllUsers = () => {
                                 <td>{user.email}</td>
                                 <td>{user.role === 'admin' ? 'Admin':<button onClick={()=> handleMakeAdmin(user._id)}><FaUserTie></FaUserTie></button>}</td>
 
-                                
+
                                 <td>{user.role === 'instructor' ? 'Instructor':<button onClick={()=> handleMakeInstructor(user._id)}><FaUsers></FaUsers></button>}</td>
                             </tr>)
                         }
@@ -82,6 +87,7 @@ const AllUsers = () => {
                 </table>
             </div>
         </div>
+        </>
     );
 };
 

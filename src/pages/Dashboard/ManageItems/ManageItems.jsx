@@ -2,6 +2,7 @@ import React from 'react';
 import useData from '../../../hooks/useData';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import { Helmet } from 'react-helmet-async';
 
 const ManageItems = () => {
     const [teachers, , refetch] = useData();
@@ -33,6 +34,10 @@ const ManageItems = () => {
         })
     }
     return (
+        <>
+        <Helmet>
+            <title>Dashboard | Manage Items</title>
+        </Helmet>
         <div className='w-full'>
 
             <div className="overflow-x-auto ">
@@ -85,6 +90,7 @@ const ManageItems = () => {
                 </table>
             </div>
         </div>
+        </>
     );
 };
 

@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Instructor = ({ item }) => {
     const { img, name, class_name, email, totalClass } = item;
     return (
+        <>
+        <Helmet>
+            <title>Instructor</title>
+        </Helmet>
         <div className="card w-96  bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
             <img src={img} alt="Shoes" className="rounded-xl h-72" />
@@ -15,6 +20,7 @@ const Instructor = ({ item }) => {
             <button className="btn btn-active btn-neutral  btn-sm">See Classes</button>
         </div>
     </div>
+        </>
     );
 };
 
