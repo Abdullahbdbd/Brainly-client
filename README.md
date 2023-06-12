@@ -1,4 +1,4 @@
-<img className='h-14' src="https://www.clipartmax.com/png/full/179-1792539_culture-clipart-service-learning-logo-for-social-science.png" alt="Logo"> Brainly
+<img className='h-14'  width="200px" src="https://www.clipartmax.com/png/full/179-1792539_culture-clipart-service-learning-logo-for-social-science.png" alt="Logo"> Brainly
 
 
 # Project Description
