@@ -20,7 +20,7 @@ const Class = ({ item }) => {
         console.log(item)
         if (user && user.email) {
             const selectedClass = { classId: _id, name, img, price, seat, teacher, email: user.email }
-            fetch('http://localhost:5000/booked', {
+            fetch('https://summer-camp-school-server-amber.vercel.app/booked', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

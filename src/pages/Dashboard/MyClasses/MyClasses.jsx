@@ -12,7 +12,7 @@ const MyClasses = () => {
     }, [user]);
 
     const fetchClasses = () => {
-        fetch(`http://localhost:5000/school/${user.email}`, {
+        fetch(`https://summer-camp-school-server-amber.vercel.app/school/${user.email}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
