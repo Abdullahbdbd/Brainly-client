@@ -3,6 +3,8 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useSelectedClass from '../../../hooks/useSelectedClass';
+import useAdmin from '../../../hooks/useAdmin';
+import useInstructor from '../../../hooks/useInstructor';
 
 const Class = ({ item }) => {
     const { img, teacher, name, seat, price, _id } = item;
@@ -10,6 +12,8 @@ const Class = ({ item }) => {
     const [, refetch]= useSelectedClass();
     const navigate = useNavigate();
     const location = useLocation();
+    const [isAdmin] = useAdmin()
+    const [isInstructor] = useInstructor()
 
     const handleSelectClass = item => {
           console.log(item)
@@ -26,6 +30,7 @@ const Class = ({ item }) => {
             .then(data =>{
                 if(data.insertedId){
                     refetch();
+                    
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
@@ -61,7 +66,20 @@ const Class = ({ item }) => {
                 <h2 className="card-title">Price: ${price}</h2>
 
                 <div className="card-actions justify-end mt-5">
-                    <button onClick={() => handleSelectClass(item)} className="btn btn-active btn-neutral btn-sm">Select</button>
+                    {
+                        isAdmin ? 
+                        <>
+                        <button className="btn btn-active btn-error btn-sm" disabled>Select</button></>
+                        :
+                        <>
+                        {isInstructor ? 
+                            <button className="btn btn-active btn-error btn-sm" disabled>Select</button>
+                            :
+                            <button onClick={() => handleSelectClass(item)} className="btn btn-active btn-neutral btn-sm">Select</button>
+                        }
+                        </>
+                    }
+                    
                 </div>
             </div>
         </div>

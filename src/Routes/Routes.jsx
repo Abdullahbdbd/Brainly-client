@@ -15,6 +15,7 @@ import AddItems from "../pages/Dashboard/AddItems/AddItems";
 import InstructorRoute from "./InstructorRoute";
 import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
 import Payment from "../pages/Dashboard/Payment/Payment";
+import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
 
  export const router = createBrowserRouter([
     {
@@ -67,6 +68,10 @@ import Payment from "../pages/Dashboard/Payment/Payment";
             {
                 path: 'payment',
                 element: <Payment></Payment>
+            },
+            {
+                path: 'myclasses',
+                element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
             }
         ]
     }

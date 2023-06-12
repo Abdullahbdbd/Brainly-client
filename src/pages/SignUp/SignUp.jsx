@@ -40,8 +40,8 @@ const SignUp = () => {
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="ml-5">
-                    <img src="https://globalrecognitions.com/r-r/public/assets/vendors/images/login-page-img.png" alt="" />
+                <div className="ml-5 w-1/2">
+                    <img src="https://www.vibrantacademy.com/entranceresult/img/login.png" alt="" />
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mr-5">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">

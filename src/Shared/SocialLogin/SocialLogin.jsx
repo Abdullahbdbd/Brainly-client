@@ -9,6 +9,7 @@ const SocialLogin = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    console.log('login page', location)
     const from = location.state?.from?.pathname || "/";
 
     const handleGoogleSignIn =()=>{

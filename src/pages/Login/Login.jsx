@@ -38,8 +38,8 @@ const Login = () => {
     return (
         <div className="hero mt-20">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left ml-5">
-                    <img src="https://globalrecognitions.com/r-r/public/assets/vendors/images/login-page-img.png" alt="" />
+                <div className="text-center lg:text-left ml-5 h-1/2 w-1/2">
+                    <img src="https://www.vibrantacademy.com/entranceresult/img/login.png" alt="" />
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mr-5">
 
@@ -49,13 +49,13 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered" />
+                            <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={show ? "text": "password"} name='password' placeholder="password" className="input input-bordered" />
+                            <input type={show ? "text": "password"} name='password' placeholder="password" className="input input-bordered" required />
                             <p className='ml-72 -mt-8' onClick={()=> setShow(!show)}>
                                 {
                                     show? <span><FaEyeSlash></FaEyeSlash></span>: <span><FaEye></FaEye></span>
