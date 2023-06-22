@@ -36,3 +36,9 @@ In which an instructor can add his own class
 ## Live Site 
 
 You can visit the live site at [https://summer-camp-school-clien-3a05a.web.app]
+
+
+* Admin Email : admin@admin.com
+ Password : Aa$111
+* Instructor Email : instructor@i.com
+ Password : Aa$111
